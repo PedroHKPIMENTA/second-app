@@ -1,11 +1,9 @@
 import { IonCard, IonButton, IonItem, IonInput, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle } from '@ionic/react';
-import { useParams } from 'react-router';
-import ExploreContainer from '../components/ExploreContainer';
 import './Login.css';
 
 const Login: React.FC = () => {
 
-  const { name = '' } = useParams<{ name: string; }>();
+
 
   return (
     <div className='Tela-Login'>
@@ -27,7 +25,7 @@ const Login: React.FC = () => {
           </IonItem>
           <IonItem>
           <IonButton size="default" color='success'>Login</IonButton>
-          <IonButton size="default" fill='clear'>Cadastre-se</IonButton>
+          <IonButton routerLink='/Register' size="default" fill='clear'>Cadastre-se</IonButton>
           </IonItem>
         </IonCardContent>
       </IonCard>

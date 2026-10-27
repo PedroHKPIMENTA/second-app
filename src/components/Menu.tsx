@@ -1,4 +1,5 @@
 import {
+  IonButton,
   IonContent,
   IonIcon,
   IonItem,
@@ -26,6 +27,7 @@ const appPages: AppPage[] = [
 ];
 
 
+
 const Menu: React.FC = () => {
   const location = useLocation();
 
@@ -35,6 +37,9 @@ const Menu: React.FC = () => {
         <IonList id="inbox-list">
           <IonListHeader>Inbox</IonListHeader>
           <IonNote>hi@ionicframework.com</IonNote>
+                 <div className='botao-login'>
+                   <IonButton routerLink='/login'>Login</IonButton>
+                 </div>
           {appPages.map((appPage, index) => {
             return (
               <IonMenuToggle key={index} autoHide={false}>
